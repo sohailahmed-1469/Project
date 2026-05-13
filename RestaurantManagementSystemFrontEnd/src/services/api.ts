@@ -9,7 +9,7 @@ import {
 } from '../types/auth';
 
 const API_BASE_URL = 'https://restaurant-user-service.onrender.com';
-const API_BASE_URL_1 = 'http://localhost:8082/api';
+const API_BASE_URL_1 = 'https://project-ieck.onrender.com';
 const API_BASE_URL_2 = 'http://localhost:8083/api/order';
 const API_BASE_URL_3 = 'http://localhost:8084/api/reservations';
 
