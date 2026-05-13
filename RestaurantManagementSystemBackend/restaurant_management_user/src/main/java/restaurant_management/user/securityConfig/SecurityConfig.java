@@ -34,17 +34,15 @@ public class SecurityConfig {
 
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(
-                                SessionCreationPolicy.STATELESS))
+                                SessionCreationPolicy.STATELESS
+                        )
+                )
 
                 .authorizeHttpRequests(auth -> auth
 
                         .requestMatchers(
                                 "/auth/**"
                         ).permitAll()
-
-                        .requestMatchers(
-                                "/admin/**"
-                        ).hasRole("ADMIN")
 
                         .anyRequest().authenticated()
                 )
@@ -59,7 +57,8 @@ public class SecurityConfig {
 
     @Bean
     public AuthenticationManager authenticationManager(
-            AuthenticationConfiguration config) throws Exception {
+            AuthenticationConfiguration config
+    ) throws Exception {
 
         return config.getAuthenticationManager();
     }
